@@ -1,3 +1,5 @@
+import os
+
 import random
 import time
 
@@ -11,7 +13,8 @@ def run():
         total_follows_count = 0
 
         if ScreenManager.is_app_focused(app_tittle_name="instagram"):
-            coordinates = ScreenManager.search_image_on_screen(image_to_search="C:\\Users\\rafam\\Projects\\automatizacao-processos\\automacao\\img\\follow.png")
+            img = os.getcwd() + os.sep + "automacao" + os.sep + "img" + os.sep + "follow.png"
+            coordinates = ScreenManager.search_image_on_screen(image_to_search=img)
             print(coordinates)
 
             for coordinate in coordinates:
