@@ -6,13 +6,14 @@ from automacao.screen_manager import ScreenManager
 
 
 def run():
+    print("Aguardando....")
     while True:
         total_follows_count = 0
-        
+
         if ScreenManager.is_app_focused(app_tittle_name="instagram"):
             coordinates = ScreenManager.search_image_on_screen(image_to_search="C:\\Users\\rafam\\Projects\\automatizacao-processos\\automacao\\img\\follow.png")
             print(coordinates)
-            
+
             for coordinate in coordinates:
                 total_follows_count += 1
                 ScreenManager.click_on_screen(coordinate_to_click=coordinate)
@@ -26,4 +27,9 @@ def run():
             print("Saindo do programa InstagramBot")
             break
 
+
+print("Olá, estou aguardando você abrir o navegador\n"
+      "e selecionar o perfil que quer copiar os seguidores!")
+time.sleep(5)
+print("Vou executar a função!")
 run()
