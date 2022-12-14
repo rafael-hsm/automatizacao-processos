@@ -20,10 +20,10 @@ def run():
             for coordinate in coordinates:
                 total_follows_count += 1
                 ScreenManager.click_on_screen(coordinate_to_click=coordinate)
-                time.sleep(random.randint(1, 2))
+                # time.sleep(random.randint(3, 4))
 
             ScreenManager.scroll_on_screen(value_scroll=-400)
-            time.sleep(random.randint(1, 2))
+            time.sleep(random.randint(90, 120))
             print(f"Total de follows até o momento {str(total_follows_count)}")
 
         if keyboard.is_pressed("ESC"):
